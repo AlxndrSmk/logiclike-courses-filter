@@ -1,0 +1,102 @@
+@import './variables';
+
+* {
+  box-sizing: border-box;
+  color: $font-color;
+  margin: 0 auto;
+}
+
+html {
+  font-family: 'Nunito', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.section {
+  &__bottom {
+    align-items: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    padding: 10px;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  color: $font-color;
+  cursor: pointer;
+  font-weight: 600;
+  margin: 0 10px;
+  padding: 5px;
+  text-transform: uppercase;
+  transition: 0.1s ease;
+  z-index: 2;
+
+  &:hover {
+    color: $active-font-color;
+    filter: drop-shadow(0px 0px 4px $active-font-color);
+  }
+
+  &:disabled,
+  &[disabled] {
+    border: none;
+    color: #666666;
+    cursor: default;
+
+    &:hover {
+      filter: none;
+    }
+  }
+}
+
+.item {
+  cursor: default;
+
+  &__link {
+    cursor: pointer;
+    display: block;
+    text-decoration: underline;
+    transition: 0.1s ease;
+    width: fit-content;
+
+    &:hover {
+      color: $active-font-color;
+      filter: drop-shadow(0px 0px 4px $active-font-color);
+    }
+
+    &_specie {
+      color: $active-font-color;
+      font-size: 0.9em;
+      font-weight: 600;
+      margin-bottom: 10px;
+      text-decoration: none;
+    }
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.inline {
+  display: inline;
+}
