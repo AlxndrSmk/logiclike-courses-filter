@@ -2,6 +2,8 @@
 
 This repository contains the code for the LogicLike test assignment. Build a React app with TypeScript and SCSS to display and filter educational courses based on tags. Data comes from an API.
 
+[Deployment link (clickable)](https://luxury-phoenix-775522.netlify.app/)
+
 ## Downloading
 
 ```
