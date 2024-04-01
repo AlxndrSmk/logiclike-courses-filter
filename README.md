@@ -1,4 +1,4 @@
-# Home Library Service
+# LogicLike test assignment
 
 This repository contains the code for the LogicLike test assignment. Build a React app with TypeScript and SCSS to display and filter educational courses based on tags. Data comes from an API.
 
