@@ -3,7 +3,7 @@
 * {
   box-sizing: border-box;
   color: $font-color;
-  margin: 0 auto;
+  margin: 0;
 }
 
 html {
@@ -12,6 +12,8 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
+  font-weight: 800;
+  font-size: 18px;
 }
 
 a {

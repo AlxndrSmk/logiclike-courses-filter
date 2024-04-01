@@ -1,0 +1,15 @@
+.app {
+  padding: 24px;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__courses-list {
+    display: flex;
+    // flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

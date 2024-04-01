@@ -1,0 +1,24 @@
+@import '../../variables';
+
+.sidebar-item {
+  align-items: center;
+  border-radius: 12px;
+  display: flex;
+  height: 42px;
+  padding: 12px;
+  transition: color 0.25s;
+
+  &:hover {
+    color: $hover-active-color;
+    cursor: pointer;
+  }
+}
+
+.selected {
+  background-color: $hover-active-color;
+  color: $active-font-color;
+
+  &:hover {
+    color: $active-font-color;
+  }
+}

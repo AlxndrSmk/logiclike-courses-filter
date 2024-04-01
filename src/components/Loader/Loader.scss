@@ -1,0 +1,18 @@
+.loader {
+  animation: loader-spin infinite 1.5s ease-in-out;
+  background: url(/assets/images/loader.svg) no-repeat center center;
+  background-size: contain;
+  display: inline-block;
+  height: 66px;
+  width: 66px;
+}
+
+@keyframes loader-spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(720deg);
+  }
+}
