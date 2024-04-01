@@ -1,10 +1,13 @@
 import { useState } from 'react';
-import { CourseTag, SidebarProps } from '../../types/types';
 import SidebarItem from '../SidebarItem/SidebarItem';
+import { CourseTag, SidebarProps } from '../../types/types';
+
 import './Sidebar.scss';
 
 const Sidebar: React.FC<SidebarProps> = ({ data, onUpdateTag }) => {
-  const [selectedTag, setSelectedTag] = useState<CourseTag | ''>('');
+  const [selectedTag, setSelectedTag] = useState<CourseTag | ''>(
+    CourseTag.ВсеТемы
+  );
 
   const handleUpdateCourseTag = (data: CourseTag) => {
     onUpdateTag(data);

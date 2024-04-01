@@ -2,5 +2,9 @@ $font-color: #39414b;
 $border-color: #cfcfe4;
 $active-font-color: #ffffff;
 $hover-active-color: #5fbf77;
-
 $border-radius: 18px;
+
+$mobile: 'only screen and (min-width: 0px) and (max-width: 902px)';
+$tablet: 'only screen and (min-width: 903px) and (max-width: 1130px)';
+$desktop: 'only screen and (min-width: 1131px) and (max-width: 1551px)';
+$large-desktop: 'only screen and (min-width: 1552px)';

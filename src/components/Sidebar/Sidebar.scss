@@ -2,11 +2,10 @@
 
 .sidebar {
   &-wrapper {
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    margin-right: 24px;
     min-width: 264px;
     padding: 12px;
-    flex-direction: column;
-
-    border-color: $border-color;
-    border-radius: $border-radius;
   }
 }

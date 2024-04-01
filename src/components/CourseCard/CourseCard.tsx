@@ -1,4 +1,5 @@
 import { CourseCardProps } from '../../types/types';
+
 import './CourseCard.scss';
 
 const CourseCard: React.FC<CourseCardProps> = ({ data }) => {

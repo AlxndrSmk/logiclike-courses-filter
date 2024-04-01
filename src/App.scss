@@ -1,5 +1,11 @@
+@import './variables';
+
 .app {
   padding: 24px;
+
+  @media #{$mobile} {
+    display: none;
+  }
 
   &__container {
     display: flex;
@@ -8,8 +14,26 @@
 
   &__courses-list {
     display: flex;
-    // flex: 1;
-    flex-direction: row;
+    flex: 1;
     flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  &__cover {
+    display: none;
+
+    @media #{$mobile} {
+      color: $font-color;
+      display: block;
+      font-size: 2em;
+      height: 100vh;
+      left: 0;
+      padding: 40% 15%;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      width: 100vw;
+      z-index: 5;
+    }
   }
 }

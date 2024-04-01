@@ -1,4 +1,5 @@
 import { SidebarItemProps } from '../../types/types';
+
 import './SidebarItem.scss';
 
 const SidebarItem: React.FC<SidebarItemProps> = ({

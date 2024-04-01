@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import getCourses from './services/api/getCourses';
-import { Course, CourseTag } from './types/types';
 import Sidebar from './components/Sidebar/Sidebar';
-import './App.scss';
 import CourseCard from './components/CourseCard/CourseCard';
 import Loader from './components/Loader/Loader';
+import { Course, CourseTag } from './types/types';
+
+import './App.scss';
 
 const App: React.FC = () => {
   const [isDataLoaded, setIsDataLoaded] = useState<boolean>(false);
@@ -43,6 +44,8 @@ const App: React.FC = () => {
 
       setFilteredData(filteredCourses);
     }
+
+    if (courseTag === CourseTag.ВсеТемы) setFilteredData(data);
   }, [courseTag]);
 
   useEffect(() => {
@@ -56,16 +59,25 @@ const App: React.FC = () => {
   if (!isDataLoaded) return <Loader />;
 
   return (
-    <div className="app">
-      <div className="app__container">
-        <Sidebar onUpdateTag={handleUpdateTag} data={courseTags} />
-        <div className="app__courses-list">
-          {filteredData.map((el) => {
-            return <CourseCard key={JSON.stringify(el)} data={el} />;
-          })}
+    <>
+      <div className="app">
+        <div className="app__container">
+          <div className="app__sidebar">
+            <Sidebar onUpdateTag={handleUpdateTag} data={courseTags} />
+          </div>
+          <div className="app__courses-list">
+            {filteredData.map((el) => {
+              return <CourseCard key={JSON.stringify(el)} data={el} />;
+            })}
+          </div>
         </div>
       </div>
-    </div>
+
+      <div className="app__cover">
+        For optimal viewing, please ensure that your screen width is greater
+        than 902 pixels.
+      </div>
+    </>
   );
 };
 
